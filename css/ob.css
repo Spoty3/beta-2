@@ -1,0 +1,253 @@
+body{
+    background-color: #212121;
+}
+h1{
+    font-size: 350%;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+    text-align: center;
+}
+  .button2 {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  button:focus,
+  button:hover {
+    color: #fff;
+  }
+  
+  button:focus:after,
+  button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .button2:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+  .book {
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #838383;
+    box-shadow: 1px 1px 12px #838383;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+  }
+  
+  .cover {
+    top: 0;
+    position: absolute;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #838383;
+    box-shadow: 1px 1px 12px #868686;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+  }
+  
+  p {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .dd1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  .footer1 {
+      text-align: center;
+      color: #dadada;
+      padding: 20px;
+      background: #2c2c2c;
+      margin-top: 5%;
+      width: 97%;
+      box-shadow: 0 0 20px rgba(2, 2, 2, 0.5);
+    }
+    
+    /* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg,#fff);
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+
+.button {
+  appearance: none;
+  background-color: transparent;
+  border: 0.125em solid #1A1A1A;
+  border-radius: 0.9375em;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 3.75em;
+  min-width: 0;
+  outline: none;
+  padding: 1em 2.3em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  margin-top: 2px;
+ }
+ 
+ .button:disabled {
+  pointer-events: none;
+ }
+ 
+ .button:hover {
+  color: #ffffff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+ }
+ 
+ .button:active {
+  box-shadow: none;
+  transform: translateY(0);
+ }

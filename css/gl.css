@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,600');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #212121;
+}
+a{
+  text-decoration: none;
+  outline: 0;
+}
+a{
+  color: currentColor;
+  transition: .2s ease-in-out;
+}
+h1, h2, h3, h4{
+  margin: 0;
+}
+ul{
+  padding: 0;
+  list-style: none;
+}
+img{
+  vertical-align: middle;
+  height: auto;
+  width: 100%;
+}
+.page{
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 600;
+  letter-spacing: .03em;
+}
+header{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background: #343434;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+main{
+  padding: 70px 20px 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #212121;
+}
+main > div{
+  margin: auto;
+  max-width: 600px;
+}
+p{
+  line-height: 1.5;
+  font-weight: 200;
+  margin: 20px 0;
+}
+#nav-container{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+}
+.bg{
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 70px);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+  background: #000;
+}
+#nav-container:focus-within .bg{
+  visibility: visible;
+  opacity: .6;
+}
+.button{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  height: 70px;
+  width: 30px;
+  cursor: pointer;
+  pointer-events: auto;
+  margin-left: 25px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.icon-bar{
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #aaa;
+  transition: .3s;
+}
+.icon-bar + .icon-bar{
+  margin-top: 5px;
+}
+#nav-container:focus-within .button{
+  pointer-events: none;
+}
+#nav-container:focus-within .icon-bar:nth-of-type(1){
+  transform: translate3d(0,8px,0) rotate(45deg);
+}
+#nav-container:focus-within .icon-bar:nth-of-type(2){
+  opacity: 0;
+}
+#nav-container:focus-within .icon-bar:nth-of-type(3){
+  transform: translate3d(0,-8px,0) rotate(-45deg);
+}
+#nav-content{
+  margin-top: 70px;
+  padding: 20px;
+  width: 90%;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 70px);
+  background: #ececec;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  transform: translateX(-100%);
+  transition: transform .3s;
+  will-change: transform;
+  contain: paint;
+}
+#nav-content ul{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#nav-content li a{
+  padding: 10px 5px;
+  display: block;
+  text-transform: uppercase;
+  transition: color .1s;
+}
+#nav-content li a:hover{
+  color: #7a7a7a;
+}
+#nav-content li:not(.small) + .small{
+  margin-top: auto;
+}
+.small{
+  display: flex;
+  align-self: center;
+}
+.small a{
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+}
+.small a + a{
+  margin-left: 15px;
+}
+#nav-container:focus-within #nav-content{
+  transform: none;
+}
+
+.card {
+  --background: linear-gradient(to left, #dadada 0%, #383838 100%);
+  width: 190px;
+  height: 254px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+    float:left;
+    border:0px dotted #999;
+ }
+ 
+ .card::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.8);
+  filter: blur(25px);
+  background: #f7ba2b;
+  background: var(--background);
+  transition: opacity .5s;
+ }
+ 
+ .card-info {
+  --color: #181818;
+  background: var(--color);
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: .7rem;
+ }
+ 
+ .card .title {
+  font-weight: bold;
+  letter-spacing: .1em;
+ }
+ 
+ /*Hover*/
+ .card:hover::after {
+  opacity: 0;
+ }
+ 
+
+ p{
+   color: #ffffff;
+   transition: 0.3s linear;font-size: 20px;
+   } 
+   p:hover {
+     color: #b6b6b6;
+     }
+     .a1{
+          color: #ffffff;
+          transition: 0.3s linear;font-size: 20px;
+          font-size: 18px;
+     }
+     .a1:hover {
+       color: #b6b6b6;
+       }
+
+
+ /* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg,#fff);
+  margin-left: 50%;
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+.os{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 150px;
+}
+
+.footer {
+  text-align: center;
+  color: #dadada;
+  padding: 20px;
+  background: #343434;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  margin-left: 0px;
+  width: 1366px;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .Telegram:hover,
+.wrapper .Telegram:hover .tooltip,
+.wrapper .Telegram:hover .tooltip::before {
+  background: #5096ff;
+  color: #fff;
+}
+
+.wrapper .YouTube:hover,
+.wrapper .YouTube:hover .tooltip,
+.wrapper .YouTube:hover .tooltip::before {
+  background: #ff5050;
+  color: #fff;
+}
+
+.wrapper .Discord:hover,
+.wrapper .Discord:hover .tooltip,
+.wrapper .Discord:hover .tooltip::before {
+  background: #6a50ff;
+  color: #fff;
+}
+
+.wrapper .Twitch:hover,
+.wrapper .Twitch:hover .tooltip,
+.wrapper .Twitch:hover .tooltip::before {
+  background: #b950ff;
+  color: #fff;
+}
+
+.wrapper .Instagram:hover,
+.wrapper .Instagram:hover .tooltip,
+.wrapper .Instagram:hover .tooltip::before {
+  background: #eb50ff;
+  color: #fff;
+}
+
+.wrapper .Facebook:hover,
+.wrapper .Facebook:hover .tooltip,
+.wrapper .Facebook:hover .tooltip::before {
+  background: #3c5aff;
+  color: #fff;
+}
+
+.wrapper .Twitter:hover,
+.wrapper .Twitter:hover .tooltip,
+.wrapper .Twitter:hover .tooltip::before {
+  background: #3cb7ff;
+  color: #fff;
+}

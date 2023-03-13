@@ -1,0 +1,145 @@
+body{
+    background-color: #212121;
+}
+h1{
+    font-size: 350%;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+    text-align: center;
+}
+.p1{
+    font-size: 130%;
+    font-weight: 100;
+    color: #c0c0c0;
+    text-shadow: 0 0 10px #c0c0c0;
+    text-align: center;
+}
+.d1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.p2{
+    font-size: 120%;
+    font-weight: 700;
+    color: #949494;
+    text-shadow: 0 0 10px #94949454;
+    text-align: center;
+
+}
+.footer1 {
+    text-align: center;
+    color: #dadada;
+    padding: 20px;
+    background: #2c2c2c;
+    margin-top: 5%;
+    width: 97%;
+    box-shadow: 0 0 20px rgba(2, 2, 2, 0.5);
+  }
+.t1{
+    text-align: center;
+    color: #dadada;
+    padding: 20px;
+    background: #343434;
+    margin-top: 4%;
+    border-radius: 10px;
+    width: 80%;
+    height: 140px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.zag{
+    font-size: 130%;
+    color: #e5ff00;
+    text-shadow: 0 0 10px #020202;
+    text-align: center;
+}
+
+.t2{
+    margin-left: 225px;
+    text-align: center;
+    color: #dadada;
+    padding: 20px;
+    background: #343434;
+    margin-top: 4%;
+    border-radius: 10px;
+    width: 80%;
+    height: 140px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.zag2{
+    font-size: 130%;
+    color: #2dabff;
+    text-shadow: 0 0 10px #fff;
+    text-align: center;
+}
+.t3{
+    text-align: center;
+    color: #dadada;
+    padding: 20px;
+    background: #343434;
+    margin-top: 4%;
+    border-radius: 10px;
+    width: 80%;
+    height: 150px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.zag3{
+    font-size: 130%;
+    color: #555555;
+    text-shadow: 0 0 10px #000000;
+    text-align: center;
+}
+.footer {
+    text-align: center;
+    color: #dadada;
+    padding: 20px;
+    background: #343434;
+    margin-top: 10%;
+  }
+
+  button {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  button:focus,
+  button:hover {
+    color: #fff;
+  }
+  
+  button:focus:after,
+  button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+  
+
+
+
+
+  

@@ -1,0 +1,112 @@
+body{
+    background-color: #212121;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .b1 {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .error {
+    font-size: 30px;
+    margin-top: 10px;
+    color: #f80404;
+    text-shadow: 0 0 10px #fc0202;
+  }
+  .input-group {
+    position: relative;
+   }
+   
+   .input {
+    margin-top: 200px;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #f5f5f5;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+   }
+   
+   .user-label {
+    position: absolute;
+    left: 15px;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+   }
+   
+   .input:focus, input:valid {
+    outline: none;
+    border: 1.5px solid #ffffff;
+   }
+   
+   .input:focus ~ label, input:valid ~ label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #212121;
+    padding: 0 .2em;
+    color: #ee1515;
+   }
+
+   button {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  button:focus,
+  button:hover {
+    color: #fff;
+  }
+  
+  button:focus:after,
+  button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+   
+  
